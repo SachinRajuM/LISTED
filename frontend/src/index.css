@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+:root {
+  --obsidian: #0A0A0F;
+  --carbon: #111118;
+  --slate: #1A1A26;
+  --volt: #C8FF00;
+  --electric: #6C63FF;
+  --neon: #00FFB2;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  background-color: #0A0A0F;
+  color: #E8E8F0;
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+ 
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #111118; }
+::-webkit-scrollbar-thumb { background: #252535; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #6C63FF; }
+ 
+.glass {
+  background: rgba(26, 26, 38, 0.7);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+ 
+.glass-light {
+  background: rgba(37, 37, 53, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+ 
+.volt-glow {
+  box-shadow: 0 0 20px rgba(200, 255, 0, 0.15), 0 0 40px rgba(200, 255, 0, 0.05);
+}
+ 
+.electric-glow {
+  box-shadow: 0 0 20px rgba(108, 99, 255, 0.3), 0 0 60px rgba(108, 99, 255, 0.1);
+}
+ 
+.neon-glow {
+  box-shadow: 0 0 20px rgba(0, 255, 178, 0.2);
+}
+ 
+.grid-bg {
+  background-image: linear-gradient(rgba(108,99,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108,99,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+ 
+.radial-glow {
+  background: radial-gradient(ellipse at center, rgba(108,99,255,0.08) 0%, transparent 70%);
+}
+ 
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #C8FF00 0%, #6C63FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-electric {
+    background: linear-gradient(135deg, #6C63FF 0%, #00FFB2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+ 
+.Toastify__toast {
+  background: #1A1A26 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  color: #E8E8F0 !important;
+  font-family: 'Inter', sans-serif !important;
+  border-radius: 12px !important;
+}
+.Toastify__toast--success .Toastify__toast-icon svg { color: #C8FF00 !important; }
+.Toastify__toast--error .Toastify__toast-icon svg { color: #FF4D6D !important; }
+.Toastify__progress-bar--success { background: #C8FF00 !important; }
+.Toastify__progress-bar--error { background: #FF4D6D !important; }
+ 
